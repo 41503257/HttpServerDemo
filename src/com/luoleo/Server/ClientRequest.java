@@ -35,9 +35,10 @@ public class ClientRequest implements Runnable{
             this.out.print("<h1>hello!</h1>");
             this.out.print("<h3>HTTP服务器!</h3>");
             this.out.flush();
-            this.close();
         }catch (Exception e){
             e.printStackTrace();
+        }finally {
+            this.close();
         }
     }
     public void close(){
